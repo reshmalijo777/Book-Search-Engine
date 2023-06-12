@@ -1,4 +1,5 @@
 const express = require('express');
+// Apollo-server-express (deprecates in Oct 2023 to @apollo/server)
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const { authMiddleware } = require('./utils/auth');
@@ -18,6 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 if (process.env.NODE_ENV === 'production') {
+  //To read the react content when it is deployed in the heroku
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
