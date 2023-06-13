@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import SearchBook from './pages/SearchBooks';
 import SavedBook from './pages/SavedBooks';
+import Navbar from "./components/Navbar";
 
 const httpLink = createHttpLink({
   uri: '/graphql',
