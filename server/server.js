@@ -20,7 +20,7 @@ app.use(express.json());
 
 if (process.env.NODE_ENV === 'production') {
   //To read the react content when it is deployed in the heroku
-  app.use(express.static(path.join(__dirname, '../client/build')));
+  app.use(express.static(path.join(__dirname,'client','build')) )
 }
 
 app.get('/', (req, res) => {
